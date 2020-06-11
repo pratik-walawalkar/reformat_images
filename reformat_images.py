@@ -7,9 +7,12 @@ destination_folder = "/opt/icons/"
 
 def reformat():
     for item in os.listdir(source_folder):
+   
         if os.path.isfile(source_folder+item):
-            im.convert("RGB")
+     
             im = Image.open(source_folder+item)
+            #convert image to RGB format
+            im.convert("RGB")
             f, e = os.path.splitext(item)
  
             #reformat image by resizing it to 128x128 and rotating it by 90 degrees
